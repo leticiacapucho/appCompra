@@ -96,6 +96,42 @@ export class HomePage {
           console.log("Erro: " + erro.message);
         }
     );
+
+    // Adicionando um registro
+
+    let data: ICurso = {
+      // id sendo criado de forma automática
+      //  "id": 1, 
+      "titulo": "Curso de ionic Novo", 
+      "descricao": "Aprenda ionic na prática", 
+      "valor": 23.90, 
+      "valor_txt": "23,90", 
+      "imagem": "https://cdn-images-1.medium.com/max/2000/1*MbVgphFn5dsipV-Sb3eUpg.png",
+      "aulas": [
+        {
+          "id": 1,
+          "ordem": 1,
+          "titulo": "introdução ao Curso",
+          "tempo": "10:00",
+          "video": "https://www.youtube.com/embed/9XWhNHvGhHU",
+        },
+        {
+          "id": 2,
+          "ordem": 2,
+          "titulo": "Realizando a Instalação",
+          "tempo": "05:00",
+          "video": "https://www.youtube.com/embed/9XWhNHvGhHU",
+        }
+      ]
+    }; 
+
+    this.cursoProvider.addTeste(data).subscribe(
+        sucesso =>{
+          console.log(sucesso);
+        }, erro => {
+          console.log("Erro: " + erro.message);
+        }
+    );
   }
 
   abreDetalhe(item) {

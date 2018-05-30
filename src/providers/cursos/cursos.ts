@@ -17,6 +17,11 @@ export class CursosProvider {
     return this.http.get<ICurso[]>('http://localhost:3000/cursos');
   }
 
+  // adicionando um registro
+  addTeste(data: ICurso){ 
+    return this.http.post<ICurso>('http://localhost:3000/cursos', data);
+  }
+
   all() {
     const lista: ICurso[] = [
       {
