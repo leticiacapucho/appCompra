@@ -17,9 +17,24 @@ export class CursosProvider {
     return this.http.get<ICurso[]>('http://localhost:3000/cursos');
   }
 
+  // mostrar / exibir registro
+  showTeste(data: ICurso) {
+    return this.http.get<ICurso>('http://localhost:3000/cursos/' +data.id,  data);
+  }
+
   // adicionando um registro
   addTeste(data: ICurso){ 
     return this.http.post<ICurso>('http://localhost:3000/cursos', data);
+  }
+
+  // atualizar / editar registro
+  editTeste(data: ICurso) {
+    return this.http.put<ICurso>('http://localhost:3000/cursos/' +data.id,  data);
+  }
+
+  // deletar / excluir registro
+  deleteTeste(data: ICurso) {
+    return this.http.delete<ICurso>('http://localhost:3000/cursos/' +data.id);
   }
 
   all() {

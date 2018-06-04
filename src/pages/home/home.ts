@@ -102,8 +102,9 @@ export class HomePage {
     let data: ICurso = {
       // id sendo criado de forma automática
       //  "id": 1, 
-      "titulo": "Curso de ionic Novo", 
-      "descricao": "Aprenda ionic na prática", 
+      "id": 2,
+      "titulo": "Curso de Android", 
+      "descricao": "Aprenda Android na prática", 
       "valor": 23.90, 
       "valor_txt": "23,90", 
       "imagem": "https://cdn-images-1.medium.com/max/2000/1*MbVgphFn5dsipV-Sb3eUpg.png",
@@ -124,7 +125,7 @@ export class HomePage {
         }
       ]
     }; 
-
+/*
     this.cursoProvider.addTeste(data).subscribe(
         sucesso =>{
           console.log(sucesso);
@@ -132,6 +133,23 @@ export class HomePage {
           console.log("Erro: " + erro.message);
         }
     );
+    this.cursoProvider.editTeste(data).subscribe(
+      sucesso =>{
+        console.log(sucesso);
+      }, erro => {
+        console.log("Erro: " + erro.message);
+      }
+  );
+ 
+
+    this.cursoProvider.deleteTeste(data).subscribe(
+      sucesso =>{
+        console.log(sucesso);
+      }, erro => {
+        console.log("Erro: " + erro.message);
+      }
+    );
+    */
   }
 
   abreDetalhe(item) {
