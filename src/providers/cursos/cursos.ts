@@ -19,8 +19,8 @@ export class CursosProvider {
 
   // mostrar / exibir registro
   showTeste(data: ICurso) {
-    return this.http.get<ICurso>('http://localhost:3000/cursos/' +data.id,  data);
-  }
+    return this.http.get<ICurso>('http://localhost:3000/cursos/' +data.id);
+  } 
 
   // adicionando um registro
   addTeste(data: ICurso){ 

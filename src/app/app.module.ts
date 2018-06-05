@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetalhePage } from '../pages/detalhe/detalhe';
 import { AulaPage } from '../pages/aula/aula';
+import { CadastroPage } from '../pages/cadastro/cadastro';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { CursosProvider } from '../providers/cursos/cursos';
     MyApp,
     HomePage,
     DetalhePage,
-    AulaPage
+    AulaPage,
+    CadastroPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { CursosProvider } from '../providers/cursos/cursos';
     MyApp,
     HomePage,
     DetalhePage,
-    AulaPage
+    AulaPage,
+    CadastroPage
   ],
   providers: [
     StatusBar,
