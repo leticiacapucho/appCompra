@@ -102,7 +102,7 @@ export class HomePage {
     let data: ICurso = {
       // id sendo criado de forma automática
       //  "id": 1, 
-      "id": 5,
+      "id": 5 ,
       "titulo": "Curso de Android", 
       "descricao": "Aprenda Android na prática", 
       "valor": 23.90, 
@@ -149,7 +149,7 @@ export class HomePage {
         console.log("Erro: " + erro.message);
       }
     );
-    */
+   
 
    this.cursoProvider.showTeste(data).subscribe(
     sucesso =>{
@@ -158,7 +158,9 @@ export class HomePage {
       console.log("Erro: " + erro.message);
     }
   );
+   */
   }
+  
 
   abreDetalhe(item) {
    // Teste pra ver se tá funcionando: alert("ok")

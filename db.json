@@ -84,5 +84,25 @@
       ],
       "id": 6
     }
+  ],
+  "usuarios": [
+    {
+      "name": "Leticia",
+      "email": "leticia@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "l",
+      "email": "l",
+      "password": "6",
+      "id": 2
+    },
+    {
+      "name": "e",
+      "email": "e",
+      "password": "e",
+      "id": 3
+    }
   ]
 }
