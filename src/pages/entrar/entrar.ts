@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 import { HomePage } from '../home/home';
 
 import { IUsuario } from '../../interfaces/IUsuario';
@@ -7,11 +8,11 @@ import { UsuariosProvider } from '../../providers/usuarios/usuarios';
 
 @IonicPage()
 @Component({
-  selector: 'page-cadastro',
-  templateUrl: 'cadastro.html',
+  selector: 'page-entrar',
+  templateUrl: 'entrar.html',
 })
-export class CadastroPage {
-  usuario: IUsuario = { name:'', email:'',password:''};
+export class EntrarPage {
+  usuario: IUsuario = { email:'',password:''};
 
   constructor(
     public navCtrl: NavController, 
@@ -27,9 +28,9 @@ export class CadastroPage {
     this.navCtrl.setRoot(HomePage);
   }
 
-  addUsuario() {
+  loginUsuario() {
    
-    this._usuariosProvider.addUsuario(this.usuario).subscribe(
+    this._usuariosProvider.loginUsuario(this.usuario).subscribe(
       //tratando erro se o servidor estiver fora do ar, sem sucesso ou com sucesso.
       
       //Case se sucesso  

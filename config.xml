@@ -85,4 +85,5 @@
     <allow-navigation href="http://150.163.136.41:8101" />
     <allow-navigation href="http://150.163.136.41:8100" />
     <engine name="ios" spec="~4.5.4" />
+    <plugin name="cordova-sqlite-storage" spec="^2.3.2" />
 </widget>
