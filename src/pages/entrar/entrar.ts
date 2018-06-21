@@ -35,6 +35,7 @@ export class EntrarPage {
       
       //Case se sucesso  
         sucesso =>{
+          this._usuariosProvider.setStorage("usuario",sucesso);
             // pegar a lista e preencher a lista com o retorno recebido na response, no caso defini como variável de sucesso
             console.log(sucesso);
         },

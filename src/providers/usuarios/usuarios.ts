@@ -15,9 +15,9 @@ export class UsuariosProvider {
     private storage: Storage) {
     console.log('Hello UsuariosProvider Provider');
   //  this.headers = { "headers": { "authorization": "Bearer " } };
-
-      storage.set('nome', 'Letícia');
-
+     
+  // é usado o this pra recuperar o nome que salvei     
+      this.storage.set('nome', 'Letícia');
       this.storage.get('nome').then((valor) => {
         if(valor){
           console.log('Nome: ', valor);
@@ -29,6 +29,14 @@ export class UsuariosProvider {
 
   }
 
+  // esse método vai receber a chave e o valor
+  setStorage(chave, valor){
+    this.storage.set(chave, valor);
+  }
+
+  getStorage(chave){
+    return this.storage.get('nome');
+  }
   showUsuario(data: IUsuario) {
     return this.http.get<IUsuario>(this.url + 'usuarios/' + data.id);
   }
